@@ -18,19 +18,24 @@ header.classList.add(
     "lg:px-0"
 );
 const headerNav = /*html*/ `
-    <a href="/">
+    <a href="/" class="hover:scale-110">
         <img src="${logoSite}" class="w-[115px] h-[19px]" alt="Giarddesign" />
     </a>
     <nav class="flex flex-row gap-[48px] md:items-center">
-        <div id="menu" class="hidden md:flex w-screen md:w-full bg-red-500 p-[16px] relative">
-            <button class="right-0 absolute">
-                <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Search"/>
-            </button>
+        <div id="menu" class="hidden md:flex w-screen md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
+            <div class="relative w-full h-[20px] md:hidden">
+                <button type="button" class="right-0 absolute">
+                    <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Search"/>
+                </button>
+            </div>
             <ul  class="flex flex-col md:flex-row gap-[32px] md:gap-[48px] items-start md:items-center w-full">
                 <li class="flex flex-row gap-[5px] items-center relative group">
-                    <a href="#oferta">Oferta</a>
+                    <a href="#oferta" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
+                    Oferta
                     <img src="${arrowDownIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Search"/>
-                    <div class="hidden group-hover:block absolute left-0 top-[12px] py-[6px]">
+                    </a>
+                    
+                    <div class="hidden group-hover:block absolute left-[60px] md:left-0 top-[-12px] md:top-[12px] px-[6px] py-[6px]">
                     <ul class="mt-[4px] bg-white w-[135px] border-2 border-grayLight rounded-[8px] overflow-hidden shadow-box">
                         <li class="hover:bg-primaryLight py-[8px] px-[10px] flex flex-row items-center gap-[4px] w-full">
                             <img src="${projectIcon}" class="w-[18px] h-[18px]" alt="Projekty"/>
@@ -47,15 +52,21 @@ const headerNav = /*html*/ `
                     </ul>
                     </div>
                 </li>
-                <li><a href="#firma">O firmie</a></li>
-                <li><a href="#realizacje">Realizacje</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li class="flex">
+                    <a href="#firma" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">O firmie</a>
+                </li>
+                <li class="flex">
+                    <a href="#realizacje" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">Realizacje</a>
+                </li>
+                <li class="flex">
+                    <a href="#kontakt" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">Kontakt</a>
+                </li>
             </ul>
         </div>
-        <button>
+        <button type="button" class="flex hover:scale-110">
             <img src="${searchIcon}" class="w-[24px] h-[24px]" alt="Search" />
         </button>
-        <button id="menuButton" class="block md:hidden">
+        <button type="button" id="menuButton" class="block md:hidden">
             <img src="${menuIcon}" class="w-[24px] h-[24px]" alt="Search" />
         </button>
     </nav>
