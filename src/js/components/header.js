@@ -22,7 +22,7 @@ const headerNav = /*html*/ `
     </a>
     <nav class="flex flex-row gap-[48px] items-center">
         
-        <ul class="hidden md:flex flex-row gap-[48px] items-center">
+        <ul class="hidden md:flex flex-row gap-[32px] md:gap-[48px] items-center">
             <li class="flex flex-row gap-[5px] items-center relative group">
                 <a href="#oferta">Oferta</a>
                 <img src="${arrowDownIcon}" class="w-[12px] h-[12px]" alt="Search"/>
