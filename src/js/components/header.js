@@ -1,6 +1,6 @@
 import logoSite from "../../images/logo/giarddesign.svg";
 import searchIcon from "../../images/icons/search-icon.svg";
-import arrowDownIcon from "../../images/icons/arrow-down-icon.svg";
+import arrowDownRightIcon from "../../images/icons/arrow-down-right-icon.svg";
 import projectIcon from "../../images/offer/project-icon.svg";
 import realizationIcon from "../../images/offer/realization-icon.svg";
 import visualizeIcon from "../../images/offer/visualize-icon.svg";
@@ -32,7 +32,7 @@ const headerNav = /*html*/ `
                 <li class="flex flex-row gap-[5px] items-center relative group">
                     <a href="#oferta" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
                     Oferta
-                    <img src="${arrowDownIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Arrow"/>
+                    <img src="${arrowDownRightIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Arrow"/>
                     </a>
                     
                     <div class="hidden group-hover:block absolute left-[60px] md:left-0 top-[-12px] md:top-[12px] px-[6px] py-[6px]">
