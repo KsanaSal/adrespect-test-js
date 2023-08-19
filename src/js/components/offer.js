@@ -42,7 +42,7 @@ offer.classList.add(
 const offerContent = /*html*/ `
     <div class="flex flex-col gap-[24px] md:gap-[30px] lg:gap-[96px] px-[24px] lg:px-0 lg:items-center">
         <div class="flex flex-col gap-[16px] md:text-start md:w-[700px]">
-            <h2 class="font-[Montserrat] font-medium text-[28px]">Działamy 
+            <h2 class="font-[Montserrat] font-medium text-[28px] md:text-[40px] lg:text-[48px]">Działamy 
                 <span class="italic">kompleksowo</span>
             </h2>
             <p class="text-center text-[16px] md:text-start">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>

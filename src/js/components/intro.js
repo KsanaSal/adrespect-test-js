@@ -24,7 +24,8 @@ const introContent = /*html*/ `
             </p>
             <div
                 class="flex flex-col items-center md:flex-row gap-[20px] md:gap-[36px]">
-                ${buttonPrimary("Skontaktuj się z nami")} ${buttonSecondary(`
+                ${buttonPrimary("Skontaktuj się z nami")} 
+                ${buttonSecondary(`
                 <div class="flex items-center gap-[8px]">
                     <span>Zobacz nasze realizacje</span>
                     <svg
@@ -42,12 +43,10 @@ const introContent = /*html*/ `
                 `)}
             </div>
         </div>
-        <div class="flex relative">
-            <img
-                src="${imgGarden}"
-                class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
-                alt="Ogród" />
-        </div>
+        <img
+            src="${imgGarden}"
+            class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
+            alt="Ogród" />
     </div>
     <!-- slide 2 -->
     <div  class="flex flex-col lg:flex-row lg:justify-between w-full cards">
@@ -64,7 +63,8 @@ const introContent = /*html*/ `
             </p>
             <div
                 class="flex flex-col items-center md:flex-row gap-[20px] md:gap-[36px]">
-                ${buttonPrimary("Skontaktuj się z nami")} ${buttonSecondary(`
+                ${buttonPrimary("Skontaktuj się z nami")} 
+                ${buttonSecondary(`
                 <div class="flex items-center gap-[8px]">
                     <span>Zobacz nasze realizacje</span>
                     <svg
@@ -82,12 +82,10 @@ const introContent = /*html*/ `
                 `)}
             </div>
         </div>
-        <div class="flex relative">
-            <img
-                src="${imgGardenHouse}"
-                class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
-                alt="Ogród" />
-        </div>
+        <img
+            src="${imgGardenHouse}"
+            class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
+            alt="Altana" />
     </div>
     <!-- slide 3 -->
     <div  class="flex flex-col lg:flex-row lg:justify-between w-full cards">
@@ -104,7 +102,8 @@ const introContent = /*html*/ `
             </p>
             <div
                 class="flex flex-col items-center md:flex-row gap-[20px] md:gap-[36px]">
-                ${buttonPrimary("Skontaktuj się z nami")} ${buttonSecondary(`
+                ${buttonPrimary("Skontaktuj się z nami")} 
+                ${buttonSecondary(`
                 <div class="flex items-center gap-[8px]">
                     <span>Zobacz nasze realizacje</span>
                     <svg
@@ -122,12 +121,10 @@ const introContent = /*html*/ `
                 `)}
             </div>
         </div>
-        <div class="flex relative">
-            <img
-                src="${imgFlowerGarden}"
-                class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
-                alt="Ogród" />
-        </div>
+        <img
+            src="${imgFlowerGarden}"
+            class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
+            alt="Ogród kwiatowy" />
     </div>
     <!-- slide 4 -->
     <div  class="flex flex-col lg:flex-row lg:justify-between w-full cards">
@@ -144,7 +141,8 @@ const introContent = /*html*/ `
             </p>
             <div
                 class="flex flex-col items-center md:flex-row gap-[20px] md:gap-[36px]">
-                ${buttonPrimary("Skontaktuj się z nami")} ${buttonSecondary(`
+                ${buttonPrimary("Skontaktuj się z nami")} 
+                ${buttonSecondary(`
                 <div class="flex items-center gap-[8px]">
                     <span>Zobacz nasze realizacje</span>
                     <svg
@@ -162,13 +160,10 @@ const introContent = /*html*/ `
                 `)}
             </div>
         </div>
-        <div class="flex relative">
-            <img
-                src="${imgGardenRelax}"
-                
-                class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
-                alt="Ogród" />
-        </div>
+        <img
+            src="${imgGardenRelax}"
+            class="w-full lg:w-[688px] shrink-0 h-[250px] md:h-[437px] lg:h-[737px]"
+            alt="Altana do relaksu" />
     </div>
 </div>
 <div
