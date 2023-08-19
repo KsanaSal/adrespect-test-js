@@ -7,7 +7,7 @@ intro.classList.add("flex", "w-full", "bg-secondary");
 const introContent = /*html*/ `
     <div class="flex flex-col lg:flex-row lg:justify-between w-full">
         <div class="py-[20px] md:py-[30px] px-[24px] lg:pl-[90px] lg:pr-0 flex flex-col gap-[20px] md:gap-[30px] w-full lg:w-[600px] items-center md:items-start lg:justify-center">
-            <h1 class="text-[36px] leading-[42px] md:text-[48px] md:leading-[56px] lg:text-[60px] lg:leading-[70px] font-medium text-center md:text-start">Nowoczesna aranżacja
+            <h1 class="font-[Montserrat] text-[36px] leading-[42px] md:text-[48px] md:leading-[56px] lg:text-[60px] lg:leading-[70px] font-medium text-center md:text-start">Nowoczesna aranżacja
             Twojego ogrodu </h1>
             <p class="text-[16px] text-center md:text-start">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
             <div class="flex flex-col items-center md:flex-row gap-[20px] md:gap-[36px]">

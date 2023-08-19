@@ -19,11 +19,11 @@ header.classList.add(
     "mx-auto"
 );
 const headerNav = /*html*/ `
-    <a href="/" class="hover:scale-110">
+    <a href="/" class="hover:scale-110 h-[24px]">
         <img src="${logoSite}" class="w-[115px] h-[19px]" alt="Giarddesign" />
     </a>
-    <nav class="flex flex-row gap-[48px] md:items-center">
-        <div id="menu" class="hidden md:flex w-screen md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
+    <nav id="nav" class="flex flex-row gap-[48px] md:items-center">
+        <div id="menu" class="hidden md:flex w-[90vw] md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
             <div class="relative w-full h-[20px] md:hidden">
                 <button id="close" type="button" class="right-0 absolute">
                     <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Close"/>
@@ -64,28 +64,36 @@ const headerNav = /*html*/ `
                 </li>
             </ul>
         </div>
-        <button type="button" class="flex hover:scale-110">
+        <button id="searchButton" type="button" class="flex hover:scale-110">
             <img src="${searchIcon}" class="w-[24px] h-[24px]" alt="Search" />
         </button>
         <button type="button" id="menuButton" class="block md:hidden">
             <img src="${menuIcon}" class="w-[24px] h-[24px]" alt="Menu" />
         </button>
     </nav>
-`;
+    `;
 
 header.innerHTML = headerNav;
 
 const menuButton = header.querySelector("#menuButton");
+const searchButton = header.querySelector("#searchButton");
 const menu = header.querySelector("#menu");
+const nav = header.querySelector("#nav");
 menuButton.addEventListener("click", () => {
     menu.classList.add("block");
+    menuButton.classList.add("hidden");
+    searchButton.classList.add("hidden");
     menu.classList.remove("hidden");
+    nav.classList.add("absolute");
 });
 
 const close = header.querySelector("#close");
 close.addEventListener("click", () => {
     menu.classList.add("hidden");
     menu.classList.remove("block");
+    menuButton.classList.remove("hidden");
+    searchButton.classList.remove("hidden");
+    nav.classList.remove("absolute");
 });
 
 export default header;
