@@ -21,6 +21,9 @@ export default {
             boxShadow: {
                 box: "5px 7px 7px rgba(0, 0, 0, 0.2)",
             },
+            dropShadow: {
+                textShadow: "5px 5px 3px rgba(27, 91, 49, 0.7)",
+            },
         },
     },
     plugins: [],

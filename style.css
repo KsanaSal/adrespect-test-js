@@ -11,7 +11,7 @@ body {
     padding: 0;
     min-width: 320px;
     min-height: 100vh;
-    font-family: "Montserrat", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -52,4 +52,30 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.slide-in-left {
+    animation: slide-in-left 0.5s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slide-in-right 0.5s ease-in-out both;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

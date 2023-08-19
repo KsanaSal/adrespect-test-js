@@ -1,6 +1,6 @@
 import logoSite from "../../images/logo/giarddesign.svg";
 import searchIcon from "../../images/icons/search-icon.svg";
-import arrowDownIcon from "../../images/icons/arrow-down-icon.svg";
+import arrowDownRightIcon from "../../images/icons/arrow-down-right-icon.svg";
 import projectIcon from "../../images/offer/project-icon.svg";
 import realizationIcon from "../../images/offer/realization-icon.svg";
 import visualizeIcon from "../../images/offer/visualize-icon.svg";
@@ -15,14 +15,15 @@ header.classList.add(
     "justify-between",
     "py-[24px]",
     "px-[24px]",
-    "lg:px-0"
+    "lg:px-0",
+    "mx-auto"
 );
 const headerNav = /*html*/ `
-    <a href="/" class="hover:scale-110">
+    <a href="/" class="hover:scale-110 h-[24px]">
         <img src="${logoSite}" class="w-[115px] h-[19px]" alt="Giarddesign" />
     </a>
-    <nav class="flex flex-row gap-[48px] md:items-center">
-        <div id="menu" class="hidden md:flex w-screen md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
+    <nav id="nav" class="flex flex-row gap-[48px] md:items-center">
+        <div id="menu" class="hidden md:flex w-[90vw] md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
             <div class="relative w-full h-[20px] md:hidden">
                 <button id="close" type="button" class="right-0 absolute">
                     <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Close"/>
@@ -32,10 +33,10 @@ const headerNav = /*html*/ `
                 <li class="flex flex-row gap-[5px] items-center relative group">
                     <a href="#oferta" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
                     Oferta
-                    <img src="${arrowDownIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Arrow"/>
+                    <img src="${arrowDownRightIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Arrow"/>
                     </a>
                     
-                    <div class="hidden group-hover:block absolute left-[60px] md:left-0 top-[-12px] md:top-[12px] px-[6px] py-[6px]">
+                    <div class="hidden group-hover:block absolute left-[60px] md:left-0 top-[-12px] md:top-[12px] px-[6px] py-[6px] z-10">
                     <ul class="mt-[4px] bg-white w-[135px] border-2 border-grayLight rounded-[8px] overflow-hidden shadow-box">
                         <li class="hover:bg-primaryLight py-[8px] px-[10px] flex flex-row items-center gap-[4px] w-full">
                             <img src="${projectIcon}" class="w-[18px] h-[18px]" alt="Projekty"/>
@@ -63,28 +64,36 @@ const headerNav = /*html*/ `
                 </li>
             </ul>
         </div>
-        <button type="button" class="flex hover:scale-110">
+        <button id="searchButton" type="button" class="flex hover:scale-110">
             <img src="${searchIcon}" class="w-[24px] h-[24px]" alt="Search" />
         </button>
         <button type="button" id="menuButton" class="block md:hidden">
             <img src="${menuIcon}" class="w-[24px] h-[24px]" alt="Menu" />
         </button>
     </nav>
-`;
+    `;
 
 header.innerHTML = headerNav;
 
 const menuButton = header.querySelector("#menuButton");
+const searchButton = header.querySelector("#searchButton");
 const menu = header.querySelector("#menu");
+const nav = header.querySelector("#nav");
 menuButton.addEventListener("click", () => {
     menu.classList.add("block");
+    menuButton.classList.add("hidden");
+    searchButton.classList.add("hidden");
     menu.classList.remove("hidden");
+    nav.classList.add("absolute");
 });
 
 const close = header.querySelector("#close");
 close.addEventListener("click", () => {
     menu.classList.add("hidden");
     menu.classList.remove("block");
+    menuButton.classList.remove("hidden");
+    searchButton.classList.remove("hidden");
+    nav.classList.remove("absolute");
 });
 
 export default header;
