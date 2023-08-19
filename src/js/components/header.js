@@ -24,15 +24,15 @@ const headerNav = /*html*/ `
     <nav class="flex flex-row gap-[48px] md:items-center">
         <div id="menu" class="hidden md:flex w-screen md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
             <div class="relative w-full h-[20px] md:hidden">
-                <button type="button" class="right-0 absolute">
-                    <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Search"/>
+                <button id="close" type="button" class="right-0 absolute">
+                    <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Close"/>
                 </button>
             </div>
             <ul  class="flex flex-col md:flex-row gap-[32px] md:gap-[48px] items-start md:items-center w-full">
                 <li class="flex flex-row gap-[5px] items-center relative group">
                     <a href="#oferta" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
                     Oferta
-                    <img src="${arrowDownIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Search"/>
+                    <img src="${arrowDownIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Arrow"/>
                     </a>
                     
                     <div class="hidden group-hover:block absolute left-[60px] md:left-0 top-[-12px] md:top-[12px] px-[6px] py-[6px]">
@@ -67,21 +67,24 @@ const headerNav = /*html*/ `
             <img src="${searchIcon}" class="w-[24px] h-[24px]" alt="Search" />
         </button>
         <button type="button" id="menuButton" class="block md:hidden">
-            <img src="${menuIcon}" class="w-[24px] h-[24px]" alt="Search" />
+            <img src="${menuIcon}" class="w-[24px] h-[24px]" alt="Menu" />
         </button>
     </nav>
 `;
 
 header.innerHTML = headerNav;
-console.dir(header);
-console.log(header);
+
 const menuButton = header.querySelector("#menuButton");
 const menu = header.querySelector("#menu");
-console.log(menu);
 menuButton.addEventListener("click", () => {
     menu.classList.add("block");
     menu.classList.remove("hidden");
-    console.log("first");
+});
+
+const close = header.querySelector("#close");
+close.addEventListener("click", () => {
+    menu.classList.add("hidden");
+    menu.classList.remove("block");
 });
 
 export default header;
