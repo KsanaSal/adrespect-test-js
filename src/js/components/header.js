@@ -15,7 +15,8 @@ header.classList.add(
     "justify-between",
     "py-[24px]",
     "px-[24px]",
-    "lg:px-0"
+    "lg:px-0",
+    "mx-auto"
 );
 const headerNav = /*html*/ `
     <a href="/" class="hover:scale-110">
