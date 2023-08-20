@@ -159,12 +159,12 @@ const realizationGallery = /*html*/ `
         Nasze 
         <span class="italic">projekty</span>
     </h2>
-    <div class="masonry-grid">
+    <div class="masonry-grid mx-auto">
         ${imageList
             .map(
                 (image, index) => `
                 <a class="gallery-item" href="${image.src}">
-                    <div class="grid-item w-[calc(33%_-_40px)] my-[20px]">
+                    <div class="grid-item my-[20px]">
                         <img
                         src="${image.src}"
                         alt="${image.alt}"

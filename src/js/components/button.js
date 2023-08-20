@@ -1,6 +1,9 @@
-export const buttonPrimary = (title) => {
+export const buttonPrimary = (
+    title,
+    className = "text-grayLight hover:text-primary bg-primary border-primary hover:bg-inherit"
+) => {
     return /*html*/ `
-    <button type="button" class="transition ease-in-out delay-150 bg-primary py-[12px] px-[24px] w-max rounded-[200px] text-[16px] text-grayLight hover:-translate-y-1 duration-300 hover:scale-105 hover:shadow-box hover:text-primary hover:bg-inherit border-2 border-primary">
+    <button type="button" class="${className} transition ease-in-out delay-150  py-[12px] px-[24px] w-max rounded-[200px] text-[16px]  hover:-translate-y-1 duration-300 hover:scale-105 hover:shadow-box border-2 ">
         ${title}
     </button>
     `;
