@@ -26,6 +26,7 @@ import photo25 from "../../images/imageGallery/photo25.webp";
 import photo26 from "../../images/imageGallery/photo26.webp";
 import photo27 from "../../images/imageGallery/photo27.webp";
 import photo28 from "../../images/imageGallery/photo28.webp";
+import { buttonSecondary } from "../components/button";
 
 const realization = document.createElement("section");
 
@@ -34,7 +35,8 @@ realization.classList.add(
     "bg-secondary",
     "py-[40px]",
     "md:py-[80px]",
-    "lg:py-[120px]"
+    "lg:py-[120px]",
+    "relative"
 );
 
 const imageList = [
@@ -171,6 +173,27 @@ const realizationGallery = /*html*/ `
                 </a>`
             )
             .join("")}
+    </div>
+    <div class="gallery-gradient w-full h-[1000px] absolute bottom-[120px] pt-[860px] z-20">
+        ${buttonSecondary(
+            `
+            <div class="flex items-center gap-[8px]">
+                <span>Rozwiń</span>
+                <svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-[16px] h-[16px]">
+                    <path
+                        d="M16.5 7.99529L15.6043 7.09959L9.13642 13.5769L9.13642 1.02988e-07L7.86358 8.78099e-08L7.86358 13.5675L1.3957 7.09959L0.5 7.99529L8.50471 16L16.5 7.99529Z"
+                        fill="currentColor"/>
+                </svg>
+            </div>
+            `,
+            "text-grayDark border-grayDark hover:text-primary hover:bg-grayLight hover:border-primary"
+        )}
     </div>
 `;
 
