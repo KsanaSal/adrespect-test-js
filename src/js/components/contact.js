@@ -25,7 +25,7 @@ const contactContent = /*html*/ `
             <p class="text-[16px] md:text-start">Śledź nasze najnowsze realizacje!</p>
             ${buttonPrimary(
                 "Instagram",
-                "text-primary border-grayLight bg-grayLight hover:text-accent hover:bg-primaryLight hover:border-accent"
+                "text-primary border-grayLight bg-grayLight hover:text-accent hover:bg-primaryLight hover:border-accent hover:shadow-box"
             )}
         </div>
     </div>

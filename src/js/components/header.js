@@ -1,4 +1,4 @@
-import logoSite from "../../images/logo/giarddesign.svg";
+import logoSite from "../../images/logo/giarddesign-black.svg";
 import searchIcon from "../../images/icons/search-icon.svg";
 import arrowDownRightIcon from "../../images/icons/arrow-down-right-icon.svg";
 import projectIcon from "../../images/offer/project-icon.svg";
