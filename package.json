@@ -15,6 +15,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "masonry-layout": "^4.2.2"
+    "masonry-layout": "^4.2.2",
+    "simplelightbox": "^2.14.1"
   }
 }

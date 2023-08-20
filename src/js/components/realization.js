@@ -1,5 +1,3 @@
-const realization = document.createElement("section");
-realization.classList.add("grid");
 import photo1 from "../../images/imageGallery/photo1.webp";
 import photo2 from "../../images/imageGallery/photo2.webp";
 import photo3 from "../../images/imageGallery/photo3.webp";
@@ -28,6 +26,16 @@ import photo25 from "../../images/imageGallery/photo25.webp";
 import photo26 from "../../images/imageGallery/photo26.webp";
 import photo27 from "../../images/imageGallery/photo27.webp";
 import photo28 from "../../images/imageGallery/photo28.webp";
+
+const realization = document.createElement("section");
+
+realization.classList.add(
+    "w-full",
+    "bg-secondary",
+    "py-[40px]",
+    "md:py-[80px]",
+    "lg:py-[120px]"
+);
 
 const imageList = [
     {
@@ -145,18 +153,25 @@ const imageList = [
 ];
 
 const realizationGallery = /*html*/ `
-    <h2>Nasze projekty</h2>
-    ${imageList
-        .map(
-            (image, index) => `<div class="grid-item 2 w-1/5 my-[10px]">
-        <img
-            src="${image.src}"
-            alt="${image.alt}"
-            class="w-full" />
-    </div> `
-        )
-        .join("")}
-
+    <h2 class="font-[Montserrat] font-medium text-[28px] md:text-[40px] lg:text-[48px] text-center lg:text-start lg:pl-[160px] mb-[20px] md:mb-[30px] lg:mb-[96px]">
+        Nasze 
+        <span class="italic">projekty</span>
+    </h2>
+    <div class="masonry-grid">
+        ${imageList
+            .map(
+                (image, index) => `
+                <a class="gallery-item" href="${image.src}">
+                    <div class="grid-item w-[calc(33%_-_40px)] my-[20px]">
+                        <img
+                        src="${image.src}"
+                        alt="${image.alt}"
+                        class="w-full" />
+                    </div> 
+                </a>`
+            )
+            .join("")}
+    </div>
 `;
 
 realization.innerHTML = realizationGallery;

@@ -79,3 +79,9 @@ a {
         transform: translateX(0);
     }
 }
+
+.gallery-item {
+    display: block;
+    text-decoration: none;
+    color: #212121;
+}
