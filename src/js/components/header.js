@@ -72,6 +72,9 @@ const headerNav = /*html*/ `
         <button type="button" id="menuButton" class="block md:hidden">
             <img src="${menuIcon}" class="w-[24px] h-[24px]" alt="Menu" />
         </button>
+        <div id="searchContainer" class="hidden absolute top-20 left-1/2 -translate-x-1/2 z-30">
+            <input type="text" id="searchInput" class="px-2 py-1  w-[400px] h-[40px] border border-grayLight rounded" placeholder="Search..." />
+        </div>
     </nav>
     `;
 
@@ -81,6 +84,9 @@ const menuButton = header.querySelector("#menuButton");
 const searchButton = header.querySelector("#searchButton");
 const menu = header.querySelector("#menu");
 const nav = header.querySelector("#nav");
+const searchContainer = header.querySelector("#searchContainer");
+const searchInput = header.querySelector("#searchInput");
+
 menuButton.addEventListener("click", () => {
     menu.classList.add("block");
     menuButton.classList.add("hidden");
@@ -96,6 +102,23 @@ close.addEventListener("click", () => {
     menuButton.classList.remove("hidden");
     searchButton.classList.remove("hidden");
     nav.classList.remove("absolute");
+});
+
+searchButton.addEventListener("click", () => {
+    searchContainer.classList.toggle("hidden");
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        searchContainer.classList.add("hidden");
+    }
+});
+
+searchInput.addEventListener("keyup", (event) => {
+    // here you can implement search logic
+    if (event.key === "Enter") {
+        searchContainer.classList.add("hidden");
+    }
 });
 
 export default header;
