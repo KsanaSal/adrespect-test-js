@@ -8,6 +8,7 @@ import intro from "./components/intro";
 import offer from "./components/offer";
 import { realization } from "./components/realization";
 import contact from "./components/contact";
+import footer from "./components/footer";
 
 const app = document.querySelector("#app");
 
@@ -17,6 +18,7 @@ app.appendChild(offer);
 app.appendChild(aboutFirm);
 app.appendChild(realization);
 app.appendChild(contact);
+app.appendChild(footer);
 
 window.onload = () => {
     const masonry = new Masonry(".masonry-grid ", {
