@@ -9,7 +9,7 @@ import offer from "./components/offer";
 import { realization } from "./components/realization";
 import contact from "./components/contact";
 import footer from "./components/footer";
-import emmiter from "../utils/eventEmmiter";
+import emitter from "../utils/eventEmitter";
 
 const app = document.querySelector("#app");
 
@@ -31,8 +31,11 @@ window.onload = () => {
         itemSelector: ".grid-item",
     });
 
-    emmiter.on("listUpdated", () => {
-        console.log("firstChild");
+    masonry.on("layoutComplete", () => {
+        masonry.layout();
+    });
+
+    emitter.on("listUpdated", () => {
         masonry.reloadItems();
         masonry.layout();
     });

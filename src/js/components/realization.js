@@ -27,7 +27,7 @@ import photo26 from "../../images/imageGallery/photo26.webp";
 import photo27 from "../../images/imageGallery/photo27.webp";
 import photo28 from "../../images/imageGallery/photo28.webp";
 import { buttonSecondary } from "../components/button";
-import emmiter from "../../utils/eventEmmiter";
+import emitter from "../../utils/eventEmitter";
 
 const realization = document.createElement("section");
 
@@ -156,20 +156,19 @@ const imageList = [
     },
 ];
 
-const imgPerPage = 4;
+const imgPerPage = 9;
 let pageNumber = 1;
 
 let lastIndex = imgPerPage * pageNumber;
 
-let imgListSliced =
-    imageList.length < lastIndex ? imageList : imageList.slice(0, lastIndex);
+let imgListSliced = imageList.slice(0, imgPerPage);
 
 const realizationGallery = /*html*/ `
     <h2 class="font-[Montserrat] font-medium text-[28px] md:text-[40px] lg:text-[48px] text-center lg:text-start lg:pl-[160px] mb-[20px] md:mb-[30px] lg:mb-[96px]">
         Nasze 
         <span class="italic">projekty</span>
     </h2>
-    <div class="masonry-grid mx-auto">
+    <div class="masonry-grid overflow-hidden mx-auto">
         ${imgListSliced
             .map(
                 (image, index) => `
@@ -210,17 +209,17 @@ const realizationGallery = /*html*/ `
 realization.innerHTML = realizationGallery;
 
 const masonryContainer = realization.querySelector(".masonry-grid");
+const galleryGradient = realization.querySelector(".gallery-gradient");
 
 const button = realization.querySelector("button");
 button.addEventListener("click", () => {
     pageNumber += 1;
     lastIndex = imgPerPage * pageNumber;
-
     imgListSliced =
-        imageList.length < lastIndex
+        imageList.length <= lastIndex
             ? imageList
             : imageList.slice(0, lastIndex);
-
+    masonryContainer.innerHTML = "";
     masonryContainer.innerHTML = imgListSliced
         .map(
             (image, index) => `
@@ -235,8 +234,11 @@ button.addEventListener("click", () => {
         )
         .join("");
 
-    emmiter.emit("listUpdated");
+    emitter.emit("listUpdated");
+    if (imageList.length <= lastIndex) {
+        button.classList.add("hidden");
+        galleryGradient.classList.add("hidden");
+    }
 });
-console.log(button);
 
 export { realization };

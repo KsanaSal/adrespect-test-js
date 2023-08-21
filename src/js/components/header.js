@@ -33,7 +33,9 @@ const headerNav = /*html*/ `
                 <li class="flex flex-row gap-[5px] items-center relative group">
                     <a href="#oferta" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
                     Oferta
-                    <img src="${arrowDownRightIcon}" class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" alt="Arrow"/>
+                        <svg class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.13017 4.81427C1.95661 4.6407 1.95661 4.3593 2.13017 4.18573C2.28796 4.02794 2.53487 4.0136 2.70887 4.1427L2.75871 4.18573L6 7.42681L9.24129 4.18573C9.39907 4.02794 9.64599 4.0136 9.81998 4.1427L9.86983 4.18573C10.0276 4.34352 10.042 4.59043 9.91286 4.76442L9.86983 4.81427L6.31427 8.36983C6.15648 8.52761 5.90957 8.54196 5.73558 8.41286L5.68573 8.36983L2.13017 4.81427Z" fill="currentColor"/>
+                        </svg>
                     </a>
                     
                     <div class="hidden group-hover:block absolute left-[60px] md:left-0 top-[-12px] md:top-[12px] px-[6px] py-[6px] z-10">

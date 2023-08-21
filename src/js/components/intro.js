@@ -203,7 +203,6 @@ const introContent = /*html*/ `
 </div>
 `;
 intro.innerHTML = introContent;
-console.log(intro);
 const cardsContainer = intro.querySelector(".carousel");
 const prevButton = intro.querySelector("#prevSlide");
 const nextButton = intro.querySelector("#nextSlide");
