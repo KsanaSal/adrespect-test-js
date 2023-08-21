@@ -10,6 +10,7 @@ const cards = [
         text: "Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.",
         link: "#projekty",
         linkTitle: "Dowiedz się więcej",
+        id: "projekty",
     },
     {
         img: visualizeIcon,
@@ -17,6 +18,7 @@ const cards = [
         text: "Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.",
         link: "#wizualizacje",
         linkTitle: "Dowiedz się więcej",
+        id: "wizualizacje",
     },
     {
         img: realizationIcon,
@@ -24,6 +26,7 @@ const cards = [
         text: "Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.",
         link: "#realizacje",
         linkTitle: "Zobacz nasze realizacje",
+        id: "realizacje",
     },
 ];
 
@@ -38,6 +41,7 @@ offer.classList.add(
     "lg:py-[120px]",
     "items-center"
 );
+offer.setAttribute("id", "oferta");
 
 const offerContent = /*html*/ `
     <div class="flex flex-col gap-[24px] md:gap-[30px] lg:gap-[96px] px-[24px] lg:px-0 lg:items-center">

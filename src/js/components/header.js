@@ -23,7 +23,7 @@ const headerNav = /*html*/ `
         <img src="${logoSite}" class="w-[115px] h-[19px]" alt="Giarddesign" />
     </a>
     <nav id="nav" class="flex flex-row gap-[48px] md:items-center">
-        <div id="menu" class="hidden md:flex w-[90vw] md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative">
+        <div id="menu" class="hidden md:flex w-[90vw] md:w-full bg-grayLight md:bg-white p-[16px] md:p-0 relative z-30">
             <div class="relative w-full h-[20px] md:hidden">
                 <button id="close" type="button" class="right-0 absolute">
                     <img src="${closeIcon}" class="w-[20px] h-[20px]" alt="Close"/>

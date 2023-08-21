@@ -9,6 +9,7 @@ import offer from "./components/offer";
 import { realization } from "./components/realization";
 import contact from "./components/contact";
 import footer from "./components/footer";
+import emmiter from "../utils/eventEmmiter";
 
 const app = document.querySelector("#app");
 
@@ -28,6 +29,12 @@ window.onload = () => {
         originLeft: true,
         horizontalOrder: true,
         itemSelector: ".grid-item",
+    });
+
+    emmiter.on("listUpdated", () => {
+        console.log("firstChild");
+        masonry.reloadItems();
+        masonry.layout();
     });
 
     let lightbox = new SimpleLightbox(".masonry-grid a", {

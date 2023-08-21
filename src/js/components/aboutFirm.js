@@ -4,6 +4,7 @@ import { buttonSecondary } from "../components/button";
 const aboutFirm = document.createElement("section");
 
 aboutFirm.classList.add("flex", "w-full", "bg-primary");
+aboutFirm.setAttribute("id", "firma");
 
 const aboutFirmContent = /*html*/ `
     <div class="flex flex-col lg:flex-row lg:justify-between lg:gap-[64px] w-full">

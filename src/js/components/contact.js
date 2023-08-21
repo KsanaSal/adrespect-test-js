@@ -12,6 +12,7 @@ contact.classList.add(
     "flex",
     "justify-center"
 );
+contact.setAttribute("id", "kontakt");
 
 const contactContent = /*html*/ `
     <div class="flex flex-col lg:flex-row items-center md:items-start gap-[20px] md:gap-[40px] lg:gap-[64px] bg-primary py-[40px] md:py-[60px] lg:py-[120px] px-[24px] md:px-[60px] lg:px-[110px] text-grayLight w-full">

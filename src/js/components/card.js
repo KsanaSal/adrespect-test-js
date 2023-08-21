@@ -1,6 +1,6 @@
 export const card = (el) => {
     return /*html*/ `
-        <div class="flex flex-col gap-[24px] md:gap-[40px] md:w-[320px] lg:w-[378px] px-[24px] md:px-[30px] lg:px-[40px] py-[30px] md:py-[40px] lg:py-[48px] bg-white rounded-[28px] text-start transition ease-in-out delay-150 hover:-translate-y-1 duration-300 hover:scale-110 hover:shadow-box">
+        <div id="${el.id}" class="flex flex-col gap-[24px] md:gap-[40px] md:w-[320px] lg:w-[378px] px-[24px] md:px-[30px] lg:px-[40px] py-[30px] md:py-[40px] lg:py-[48px] bg-white rounded-[28px] text-start transition ease-in-out delay-150 hover:-translate-y-1 duration-300 hover:scale-110 hover:shadow-box">
             <div class="flex flex-col text-start  gap-[24px]">
                 <img src ="${el.img}" alt="Projekty"class="w-[30px] md:w-[40px] h-[30px] md:h-[40px"/>
                 <div class="flex flex-col gap-[12px]">
