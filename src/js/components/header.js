@@ -31,7 +31,7 @@ const headerNav = /*html*/ `
             </div>
             <ul  class="flex flex-col md:flex-row gap-[32px] md:gap-[48px] items-start md:items-center w-full">
                 <li class="flex flex-row gap-[5px] items-center relative group">
-                    <a href="#oferta" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
+                    <a href="#oferta" title="Offer" class="flex items-center gap-[4px] hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">
                     Oferta
                         <svg class="w-[12px] h-[12px] -rotate-90 md:-rotate-0" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.13017 4.81427C1.95661 4.6407 1.95661 4.3593 2.13017 4.18573C2.28796 4.02794 2.53487 4.0136 2.70887 4.1427L2.75871 4.18573L6 7.42681L9.24129 4.18573C9.39907 4.02794 9.64599 4.0136 9.81998 4.1427L9.86983 4.18573C10.0276 4.34352 10.042 4.59043 9.91286 4.76442L9.86983 4.81427L6.31427 8.36983C6.15648 8.52761 5.90957 8.54196 5.73558 8.41286L5.68573 8.36983L2.13017 4.81427Z" fill="currentColor"/>
@@ -42,27 +42,27 @@ const headerNav = /*html*/ `
                     <ul class="mt-[4px] bg-white w-[135px] border-2 border-grayLight rounded-[8px] overflow-hidden shadow-box">
                         <li class="hover:bg-primaryLight py-[8px] px-[10px] flex flex-row items-center gap-[4px] w-full">
                             <img src="${projectIcon}" class="w-[18px] h-[18px]" alt="Projekty"/>
-                            <a href="#projekty">Projekty</a>
+                            <a href="#projekty" title="Projects">Projekty</a>
                         </li>
                         <li class="hover:bg-primaryLight py-[8px] px-[10px] flex flex-row items-center gap-[4px] w-full">
                             <img src="${visualizeIcon}" class="w-[18px] h-[18px]" alt="Projekty"/>
-                            <a href="#wizualizacje">Wizualizacje</a>
+                            <a href="#wizualizacje" title="Visualization">Wizualizacje</a>
                         </li>
                         <li class="hover:bg-primaryLight py-[8px] px-[10px] flex flex-row items-center gap-[4px] w-full">
                             <img src="${realizationIcon}" class="w-[18px] h-[18px]" alt="Projekty"/>
-                            <a href="#realizacje">Realizacje</a>
+                            <a href="#realizacje" title="Realization">Realizacje</a>
                         </li>
                     </ul>
                     </div>
                 </li>
                 <li class="flex">
-                    <a href="#firma" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">O firmie</a>
+                    <a href="#firma" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4" title="About firm">O firmie</a>
                 </li>
                 <li class="flex">
-                    <a href="#realizacje" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">Realizacje</a>
+                    <a href="#realizacje-projekty" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4" title="Realization projects">Realizacje</a>
                 </li>
                 <li class="flex">
-                    <a href="#kontakt" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4">Kontakt</a>
+                    <a href="#kontakt" class="hover:underline hover:text-accent hover:scale-110 hover:underline-offset-4" title="Contacts">Kontakt</a>
                 </li>
             </ul>
         </div>

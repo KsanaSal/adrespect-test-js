@@ -39,7 +39,7 @@ realization.classList.add(
     "lg:py-[120px]",
     "relative"
 );
-realization.setAttribute("id", "realizacje");
+realization.setAttribute("id", "realizacje-projekty");
 
 const imageList = [
     {
